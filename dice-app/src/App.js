@@ -1,11 +1,21 @@
+import React from 'react';
 import Dice from './Dice.js';
 import './App.css';
 
 function App() {
+  const [dice, setDice] = React.useState(allNewDice())
+
+  function allNewDice()  {
+    const newDice = []
+    for (let i = 0; i<10; i++) {
+      newDice.push(Math.ceil(Math.random()*6))
+    }
+    return newDice
+  }
 
   
 
-  
+  const diceElements = dice.map(dice => <Dice value={dice} />)
 
 
 
@@ -13,18 +23,11 @@ function App() {
   return (
     <main>
       <div className='dice-container'>
-        <Dice value="1" />
-        <Dice value="1" />
-        <Dice value="1" />
-        <Dice value="1" />
-        <Dice value="1" />
-        <Dice value="1" />
-        <Dice value="1" />
-        <Dice value="1" />
-        <Dice value="1" />
-        <Dice value="1" />
+        {diceElements}
+      
         
       </div>
+      
     </main>
   );
 }
