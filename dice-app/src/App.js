@@ -1,9 +1,23 @@
-
+import Dice from './Dice.js';
 import './App.css';
 
 function App() {
   return (
-    <main></main>
+    <main>
+      <div>
+        <Dice value="1" />
+        <Dice value="1" />
+        <Dice value="1" />
+        <Dice value="1" />
+        <Dice value="1" />
+        <Dice value="1" />
+        <Dice value="1" />
+        <Dice value="1" />
+        <Dice value="1" />
+        <Dice value="1" />
+        
+      </div>
+    </main>
   );
 }
 
