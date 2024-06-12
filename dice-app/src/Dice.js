@@ -3,8 +3,8 @@ import React from "react";
 
 export default function Dice (props) {
     return (
-        <div>
-            <h2>{props.value}</h2>
+        <div className="dice-face">
+            <h2 className="dice-num">{props.value}</h2>
         </div>
     )
 }
